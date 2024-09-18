@@ -1,0 +1,39 @@
+# Project Notes
+
+## Gradient colors 
+
+Brand/Gradient (used for icons)
+#6366F1 100%
+#8B5CF6 100%
+#D946EF 100%
+
+Radial Gradient (used for header)
+#6366F11A 10%
+#DA46EF0D 5%
+#F1F4FD12 7%
+
+## Fonts
+Manrope
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+ 
+ font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+
+## Sizing
+
+## General Notes
+First I create an index.html file and a CSS folder with a main.CSS file.
+I boilerplate the index-file and add links to necessary stylesheets.
+I also create a folder for resources and add all pictures and icons I will need for the project,
+grouped into individual subfolders for better organization.
+
+I use the stylesheet "Normalize.CSS" to reset the elements needed to make styling easier,
+ensure a consistency between different browsers.
+
+I set box-sizing to border-box globally and also to the pseudo-element ::before and ::after
+to ensure an easier layout management.
+
+I add all of the projects main colors and styles to the :root to reuse them easily throughout
+the project and also change them out easily if needed.

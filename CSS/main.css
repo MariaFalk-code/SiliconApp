@@ -1,0 +1,62 @@
+/*Font: Manrope */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+:root {
+    /* Background colors*/
+    --background-white: #FFFFFF;
+    --background-grey100: #F3F6FF;
+    --background-grey900: #F3F6FF;
+
+    /* Text colors */
+    --headline-light: #0B0F19; /* Light theme */
+    --headline-dark: #FFFFFF;  /* Dark theme */
+    --text-grey900: #0B0F19;
+    --text-grey800: #33354D;
+    --text-grey700: #565973; /* Body textcolor Light theme */
+    --text-grey600: 147, 151, 174;
+    --text-grey500: #b4b7c9;
+    --text-white: #FFFFFF; /* textcolor Dark theme */
+
+    /* Additional colors */
+    --color-brand: #6366F1;
+    --border-divider-grey400: #D4D7E5;
+    --border-forms-grey300: #E2E5F1;
+    --border-secondary-grey200: #EFF2FC;
+  
+  
+    
+
+    --transition-time: 0.2s
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    background-color: var(--background-white);
+}
+
+
+
+footer {
+    color: rgba(var(--text-grey600), 0.8);
+    font-size: 14px;
+    font-weight: 400;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap: 0.2rem;
+    
+}
+
+/* a {
+    color: ;
+} */
