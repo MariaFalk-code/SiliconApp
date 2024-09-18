@@ -23,8 +23,6 @@
     --border-forms-grey300: #E2E5F1;
     --border-secondary-grey200: #EFF2FC;
   
-  
-    
 
     --transition-time: 0.2s
 }
@@ -43,7 +41,33 @@ body {
     background-color: var(--background-white);
 }
 
-footer {
+/* a {
+    color: ;
+} */
+
+.wrapper {
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+}
+
+.header {
+    grid-area: header;
+
+    background-color: pink;
+}
+
+.main {
+    grid-area: main;
+
+    background-color: rgb(95, 192, 221);
+}
+
+.footer {
+    grid-area: footer;
+    
     color: rgba(var(--text-grey600), 0.8);
     font-size: 14px;
     font-weight: 400;
@@ -54,7 +78,3 @@ footer {
     gap: 0.2rem;
     
 }
-
-/* a {
-    color: ;
-} */
