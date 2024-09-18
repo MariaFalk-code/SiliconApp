@@ -43,8 +43,6 @@ body {
     background-color: var(--background-white);
 }
 
-
-
 footer {
     color: rgba(var(--text-grey600), 0.8);
     font-size: 14px;
