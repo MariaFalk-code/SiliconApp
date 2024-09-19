@@ -46,22 +46,11 @@ body {
 } */
 
 .wrapper {
-    display: grid;
-    grid-template-areas: 
-    "header"
-    "main"
-    "footer";
-}
-
-.header {
-    grid-area: header;
-
-    background-color: pink;
+    display: flex;
+    flex-direction: column;
 }
 
 .main {
-    grid-area: main;
-
     background-color: rgb(95, 192, 221);
 }
 
@@ -94,8 +83,6 @@ body {
     background-color: #b4b7c9;
 }
 .footer {
-    grid-area: footer;
-    
     color: rgba(var(--text-grey600), 0.8);
     font-size: 14px;
     font-weight: 400;
