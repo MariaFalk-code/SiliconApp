@@ -70,7 +70,12 @@ body {
 }
 
 .brands {
-    background-color: #b4b7c9;
+    background-color: var(--background-white);
+
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: center;
 }
 
 .features {
