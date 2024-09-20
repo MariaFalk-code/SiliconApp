@@ -33,6 +33,9 @@
     box-sizing: border-box;
 }
 
+/*Utility Classes*/
+
+
 body {
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
@@ -70,6 +73,19 @@ body {
     flex-direction: row;
     gap: 1rem;
     justify-content: center;
+
+    
+
+    .brand-box {
+    border: 1px solid var(--border-forms-grey300);
+    border-radius: .5em;
+    padding: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    }
 }
 
 .features {
