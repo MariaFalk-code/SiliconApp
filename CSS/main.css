@@ -40,8 +40,6 @@ body {
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
-
-    background-color: var(--background-white);
 }
 
 /* a {
@@ -60,9 +58,35 @@ body {
 
 .hero {
     background-color: #6366F1;
+    width: 100%;
+
+    display: grid;
+    grid-auto-rows: auto, 80vh;
+    grid-template-areas: 
+    "nav nav"
+    "hero-text hero-pics";
 }
 
-.display {
+.nav {
+    grid-area: nav; 
+    width: 100%;
+    display: flex;
+}
+
+.hero-text {
+    grid-area: hero-text;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.hero-pics {
+    grid-area: hero-pics;
+    position: relative;
+    overflow: hidden;
+}
+
+h1.display {
     font-size: 56px;
 }
 
