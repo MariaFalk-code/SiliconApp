@@ -98,7 +98,7 @@ body {
 }
 
 .newsletter {
-    background-color: #b4b7c9;
+    background-color: var(--background-grey100)
 }
 .footer {
     color: rgba(var(--text-grey600), 0.8);
