@@ -79,7 +79,7 @@ body {
 .functionality {
     display: flex;
     flex-direction: column;
-    
+
     .main-functions {
     background-color: var(--background-grey100)
     }
@@ -89,8 +89,12 @@ body {
     
 }
 
+.reviews {
+    background-color: var(--background-grey100);
+}
+
 .FAQ {
-    background-color: #6366F1;
+    background-color: var(--background-white);
 }
 
 .newsletter {
