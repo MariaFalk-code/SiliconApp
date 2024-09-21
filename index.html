@@ -12,15 +12,21 @@
     <link rel="stylesheet" href="/CSS/main.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <main class="main">
+    <div class="wrapper flex-column">
+      <main class="main flex-column">
         <section class="hero">
-          <nav class="nav flex-center">
-              <img class="siliconlogo" src="/resources/icons and logos/silicon.png" alt="Silicon Logo" />
-              <a href="#">Features</a>
-              <small>Dark Mode</small>
-              <button class="slider">SLIDER</button>
-              <button class="btn-s"><i class="fa-light fa-user"></i> Sign in / up</button>
+          <nav class="nav flex-cntr">
+              <div class="group-left flex-cntr">
+                <img class="siliconlogo" src="/resources/icons and logos/silicon.png" alt="Silicon Logo" />
+                <a href="#">Features</a>
+              </div>
+              <div class="group-right flex-cntr">
+                <div class="flex-cntr-cntr">
+                  <small>Dark Mode</small>
+                  <button class="slider">SLIDER</button>
+                </div>
+                <button class="btn-s"><i class="fa-light fa-user"></i> &nbsp; Sign in / up</button>
+              </div>
               <button class="hidden-desktop">
                 <i class="fa-regular fa-bars" title="meny"></i>
               </button>
@@ -79,7 +85,7 @@
           <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus, optio?</p>
         </section>
 
-        <section class="functionality">
+        <section class="functionality flex-column">
           <div class="main-functions">
             <!--visible on all units-->
             <h2>How Does It Work?</h2>
