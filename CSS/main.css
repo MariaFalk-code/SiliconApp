@@ -23,8 +23,8 @@
     --border-forms-grey300: #E2E5F1;
     --border-secondary-grey200: #EFF2FC;
   
-
-    --transition-time: 0.2s
+    --padding-std: 16.25%;
+    --transition-time: 0.2s;
 }
 
 *,
@@ -47,6 +47,7 @@
     gap: .5rem;
     text-align: center;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 a {
@@ -62,8 +63,15 @@ a {
 .flex-column {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
+
+.hidden-desktop {
+    display: none;
+}
+
+/*End of utility classes*/
+
 
 body {
     font-family: "Manrope", sans-serif;
@@ -84,7 +92,8 @@ body {
 
 .hero {
     background-color: #f163f1;
-    width: 100%;
+    max-width: 100%;
+    padding-inline: var(--padding-std);
 
     display: grid;
     grid-template-areas: 
@@ -94,19 +103,32 @@ body {
 
 .nav {
     grid-area: nav; 
-    width: 100%;
     padding: 1.25rem 0;
+
 
     .siliconlogo {
         max-height: 45%;
         max-width: 45%;
+
+        margin-right: 3rem;
     }
 
     a {
         font-size: 1rem;
         font-weight: 600;
         color: var(--text-grey800);
+
+        margin-right: 40%;
     }
+
+    .slider{
+        
+        }
+    
+    .btn-s {
+        margin-left: 2rem;
+    }
+
 
 }
 
@@ -122,7 +144,9 @@ body {
 }
 
 h1.display {
-    font-size: 56px;
+    font-size: 3.5rem;
+    font-weight: 800;
+    line-height: 130%;
 }
 
 .brands {
@@ -166,10 +190,12 @@ h1.display {
 }
 .footer {
     color: rgba(var(--text-grey600), 0.8);
-    font-size: 14px;
+    font-size: 1rem;
     font-weight: 400;
+    line-height: 160%;
+    gap: 0.2rem;
 
-    gap: 0.2rem;  
+    padding-block: 3rem;
 }
 
 /*TABLET*/
