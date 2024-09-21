@@ -44,9 +44,9 @@
 
     display: inline-block;
     padding: .6rem 1.25rem;
-    justify-content: center;
-    align-items: center;
     gap: .5rem;
+    text-align: center;
+    text-decoration: none;
 }
 
 a {
