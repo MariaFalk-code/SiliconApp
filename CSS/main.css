@@ -53,6 +53,18 @@ a {
     text-decoration: none;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 body {
     font-family: "Manrope", sans-serif;
     font-optical-sizing: auto;
@@ -85,6 +97,11 @@ body {
     width: 100%;
     padding: 1.25rem 0;
 
+    .siliconlogo {
+        max-height: 45%;
+        max-width: 45%;
+    }
+
     a {
         font-size: 1rem;
         font-weight: 600;
@@ -93,16 +110,9 @@ body {
 
 }
 
-.siliconlogo {
-    max-height: 45%;
-    max-width: 45%;
-}
 
 .hero-text {
     grid-area: hero-text;
-    display: flex;
-    flex-direction: column;
-
 }
 
 .hero-pics {
@@ -117,23 +127,12 @@ h1.display {
 
 .brands {
     background-color: var(--background-white);
-
-    display: flex;
-    flex-direction: row;
     gap: 1rem;
-    justify-content: center;
-
-    
 
     .brand-box {
     border: 1px solid var(--border-forms-grey300);
     border-radius: .5em;
     padding: 2rem;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
     }
 }
 
@@ -170,9 +169,6 @@ h1.display {
     font-size: 14px;
     font-weight: 400;
 
-    display: flex;
-    justify-content: center;
-    text-align: center;
     gap: 0.2rem;  
 }
 
