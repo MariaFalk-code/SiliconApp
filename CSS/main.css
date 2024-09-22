@@ -5,7 +5,7 @@
     /* Background colors*/
     --background-white: #FFFFFF;
     --background-grey100: #F3F6FF;
-    --background-grey900: #F3F6FF;
+    --background-grey900: #0B0F19;
 
     /* Text colors */
     --headline-light: #0B0F19; /* Light theme */
@@ -50,16 +50,21 @@
     white-space: nowrap;
 }
 
+.btn-market {
+    background-color: var(--background-grey900);
+    
+    border: none;
+    border-radius: .5em;
+    height: 3.25rem;
+    width: 11.25rem;
+    padding: .5rem 1rem;
+}
+
 a {
     text-decoration: none;
 }
 
-.flex-cntr {
-    display: flex;
-    align-items: center;
-}
-
-.flex-cntr-cntr {
+.flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
