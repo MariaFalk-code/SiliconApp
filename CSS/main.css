@@ -24,7 +24,7 @@
     --border-secondary-grey200: #EFF2FC;
   
     --padding-std: 16.25%;
-    --transition-time: 0.2s;
+    --transition: 0.2s ease-in-out;
 }
 
 *,
@@ -45,6 +45,7 @@
     display: inline-block;
     padding: .6rem 1.25rem;
     text-align: center;
+    vertical-align: middle;
     text-decoration: none;
     white-space: nowrap;
 }
