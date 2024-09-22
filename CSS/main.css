@@ -25,6 +25,7 @@
   
     --padding-std: 16.25%;
     --transition: 0.2s ease-in-out;
+    --line-height: 160%;
 }
 
 *,
@@ -34,6 +35,8 @@
 }
 
 /*Utility Classes*/
+
+/*Buttons*/
 .btn-s {
     background-color: var(--color-brand);
     color: var(--text-white);
@@ -60,25 +63,47 @@
     padding: .5rem 1rem;
 }
 
-a {
-    text-decoration: none;
-}
-
+/*Flexbox*/
 .flex-center {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+.flex-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
 .flex-column {
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
+/*Gap*/
+.gap-1 {
+    gap: 1rem;
+}
+.gap-1-5 {
+    gap: 1.5rem;
+}
+.gap-2 {
+    gap: 2rem;
+}
+.gap-3 {
+    gap: 3rem;
+}
+
+/*Misc*/
 .hidden-desktop {
     display: none;
 }
+
+a {
+    text-decoration: none;
+}
+
 
 /*End of utility classes*/
 
@@ -98,6 +123,7 @@ body {
     background-color: #f163f1;
     max-width: 100%;
     padding-inline: var(--padding-std);
+    max-height: 55rem;
 
     display: grid;
     grid-template-areas: 
@@ -110,14 +136,10 @@ body {
     padding: 1.25rem 0;
 
     .group-left {
-        gap: 3rem;
-
         margin-right: auto;
     }
 
     .group-right {
-        gap: 2rem;
-
         margin-left: auto;
     }
 
@@ -130,15 +152,16 @@ body {
     a {
         font-size: 1rem;
         font-weight: 600;
+        line-height: var(--line-height);
         color: var(--text-grey800);
-        line-height: 160%;
     }
 
     small {
         font-size: 1rem;
         font-weight: 600;
-        line-height: 160%;
+        line-height: var(--line-height);
         color: var(--text-grey700);
+        
 
     }
     .slider{
@@ -148,18 +171,44 @@ body {
 
 .hero-text {
     grid-area: hero-text;
+
+    margin-top: 9rem;
+    margin-bottom: 4rem;
+
+    h1.display {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 130%;
+
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-size: 1.125rem;
+        font-weight: 400;
+        line-height: var(--line-height);
+        color: var(--text-grey700);
+
+        margin-top: 0;
+        margin-bottom: 3rem;
+    }
+
+    .discover {
+        margin-top: auto;
+    }
+
+    small {
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: var(--line-height);
+        color: var(--text-grey700);}
 }
 
 .hero-pics {
     grid-area: hero-pics;
     position: relative;
     overflow: hidden;
-}
-
-h1.display {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 130%;
 }
 
 .brands {
@@ -203,7 +252,7 @@ h1.display {
     color: rgba(var(--text-grey600), 0.8);
     font-size: 1rem;
     font-weight: 400;
-    line-height: 160%;
+    line-height: var(--line-height);
     gap: 0.2rem;
 
     padding-block: 3rem;
