@@ -19,11 +19,13 @@
 
     /* Additional colors */
     --color-brand: #6366F1;
-    --border-divider-grey400: #D4D7E5;
-    --border-forms-grey300: #E2E5F1;
+    --border-forms-grey400: #D4D7E5;
     --border-secondary-grey200: #EFF2FC;
   
-    --padding-std: 16.25%;
+    
+    /*Misc*/
+    --font-size: 1rem;
+    --padding-page: 16.25%;
     --transition: 0.2s ease-in-out;
     --line-height: 160%;
 }
@@ -41,12 +43,32 @@
     background-color: var(--color-brand);
     color: var(--text-white);
     font-size: .9rem;
+    font-weight: 600;
+    line-height: 1.125rem;
 
     border: none;
     border-radius: .25em;
 
     display: inline-block;
     padding: .6rem 1.25rem;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.btn-l {
+    background-color: var(--color-brand);
+    color: var(--text-white);
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: var(--line-height);
+
+    border: none;
+    border-radius: .5em;
+
+    display: inline-block;
+    padding: .8125rem 2rem;
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
@@ -116,13 +138,14 @@ body {
 
 .wrapper {
     width: 100%;
+    background-color: var(--background-white);
 }
 
 
 .hero {
     background: radial-gradient(120.91% 118.4% at 50% 100%, rgba(99, 102, 241, 0.10) 0%, rgba(218, 70, 239, 0.05) 41.83%, rgba(241, 244, 253, 0.07) 82.52%);
     max-width: 100%;
-    padding-inline: var(--padding-std);
+    padding-inline: var(--padding-page);
     max-height: 55rem;
 
     display: grid;
@@ -249,8 +272,50 @@ body {
 }
 
 .newsletter {
-    background-color: var(--background-grey100)
+    background-color: var(--background-grey100);
+    
+    margin: var(--padding-page);
+    padding-inline: clamp(2rem, 5.8vw, 8rem);
+    padding-block: clamp(1.5rem, 3.75vw, 6rem);
+
+    gap: clamp(1rem, 4vw, 5rem);
+
+    .notification {
+        max-height: 4.88rem;
+        max-width: auto;
+    }
+
+    .text-sub {
+        font-size: 1.5rem
+        font-weight: 800;
+        line-height: 140%;
+        color: var(--text-grey900);
+
+        margin-top: 0;
+        max-height: 4.88rem;
+    }
+
+    .email-form {
+        display: flex;
+        
+    }
+    
+    .form-input {
+        background: var(--background-white);
+        border: 1px solid var(--border-forms-grey400);
+        border-radius: .5em 0 0 .5em;
+
+        color: var(--text-grey500);
+        font-size: 1rem;
+        padding-left: 1rem;
+    }
+    button.sub {
+        border-radius: 0 .5em .5em 0;
+    }
+
 }
+
+
 .footer {
     color: rgba(var(--text-grey600), 0.8);
     font-size: 1rem;
