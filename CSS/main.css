@@ -100,6 +100,7 @@
 .flex-column {
   display: flex;
   flex-direction: column;
+
 }
 
 /*Gap*/
@@ -135,7 +136,6 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
-
 }
 
 small {
@@ -144,39 +144,38 @@ small {
 
 .wrapper {
   width: 100%;
+  margin: auto;
   background-color: var(--background-white);
 
-  /*MOBILE*/
-  @media (width > 576x) {
+  /* MOBILE*/
+  @media (min-width: 576px) {
     max-width: 540px;
   }
   /*TABLET*/
-  @media (width > 768px) {
+  @media (min-width: 768px) {
     max-width: 720px;
   }
 
-  @media (width > 992px) {
+  @media (min-width: 992px) {
     max-width: 960px;
   }
-  @media (width > 1200px) {
+  @media (min-width: 1200px) {
     max-width: 1140px;
   }
-  @media (width > 1400px) {
+  @media (min-width: 1400px) {
     max-width: 1320px;
   }
 }
 
 .hero {
-  min-width: 100vw;
-  margin: 0;
-  padding-inline: var(--padding-page);
-  background-image: radial-gradient(
+
+background: radial-gradient(
     120.91% 118.4% at 50% 100%,
     rgba(99, 102, 241, 0.1) 0%,
     rgba(218, 70, 239, 0.05) 41.83%,
     rgba(241, 244, 253, 0.07) 82.52%
   );
-
+  
   max-height: 150vh;
 
   display: grid;
@@ -267,8 +266,8 @@ small {
   max-height: 105vh;
 }
 
+
 .brands {
-  width: 100vw;
   padding-inline: var(--padding-page);
 
   .brand-box {
@@ -320,8 +319,6 @@ small {
 
 .newsletter {
   background-color: var(--background-grey100);
-
-  gap: 3vw;
 
   .subscribe {
     display: flex;
@@ -379,5 +376,6 @@ small {
   line-height: var(--line-height);
   gap: 0.2rem;
 
+  padding-top: 3rem;
   padding-bottom: 3rem;
 }
