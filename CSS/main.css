@@ -2,23 +2,37 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 :root {
+  /*Colors*/
+  --color-brand: #6366f1;
+  --white: #ffffff;
+
+  --grey100: #f3f6ff;
+  --grey200: #eff2fc;
+  --grey300: #e2e5f1;
+  --grey400: #d4d7e5;
+  --grey500: #b4b7c9;
+  --grey600: #9397ad;
+  --grey700: #565973;
+  --grey800: #33354d;
+  --grey900: #0b0f19;
+
+  
   /* Background colors*/
-  --background-white: #ffffff;
+  --background-primary: #ffffff;
+  --background-dark: #f7f8ff;
   --background-grey100: #f3f6ff;
-  --background-grey900: #0b0f19;
 
   /* Text colors */
-  --headline-light: #0b0f19; /* Light theme */
+  --headline: #0b0f19; /* Light theme */
   --headline-dark: #ffffff; /* Dark theme */
   --text-grey900: #0b0f19;
   --text-grey800: #33354d;
   --text-grey700: #565973; /* Body textcolor Light theme */
-  --text-grey600: 147, 151, 174;
+  --text-grey600: 147, 151, 174; /*for adding opacity*/
   --text-grey500: #b4b7c9;
   --text-white: #ffffff; /* textcolor Dark theme */
 
   /* Additional colors */
-  --color-brand: #6366f1;
   --border-grey300: #e2e5f1;
   --border-forms-grey400: #d4d7e5;
   --border-secondary-grey200: #eff2fc;
@@ -155,33 +169,33 @@ body {
   font-style: normal;
   font-weight: 400;
   text-wrap: balance;
-  background-color: var(--background-white);
+  background-color: var(--background-primary);
 }
 
 h1.display {
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 130%;
-  color: var(--text-grey900);
+  color: var(--headline);
 }
 
 h2 {
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 130%;
-  color: var(--text-grey900);
+  color: var(--headline);
 }
 h3 {
   font-size: 2rem;
   font-weight: 800;
   line-height: 130%;
-  color: var(--text-grey900);
+  color: var(--headline;
 }
 h4 {
   font-size: 1.25rem;
   font-weight: 800;
   line-height: 140%;
-  color: var(--text-grey900);
+  color: var(--headline);
 
   margin-top: 0;
   margin-bottom: .75em;
@@ -190,7 +204,7 @@ h5 {
   font-size: 1rem;
   font-weight: 600;
   line-height: var(--line-height);
-  color: var(--text-grey900);
+  color: var(--headline);
 }
 p {
   line-height: var(--line-height);
