@@ -136,16 +136,32 @@ body {
   font-optical-sizing: auto;
   font-style: normal;
   font-weight: 400;
+  background-color: var(--background-white);
 }
 
 small {
   font-size: 1rem;
 }
 
+.full-width-hero-bg {
+  width: 100%;
+  height: fit-content;
+
+  /*Hero background*/
+  background: radial-gradient(
+    120.91% 118.4% at 50% 100%,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(218, 70, 239, 0.05) 41.83%,
+    rgba(241, 244, 253, 0.07) 82.52%
+  );
+
+  background-size: cover;
+  background-position: center;
+}
+
 .wrapper {
   width: 100%;
   margin: auto;
-  background-color: var(--background-white);
 
   /* MOBILE*/
   @media (min-width: 576px) {
@@ -168,14 +184,6 @@ small {
 }
 
 .hero {
-
-background: radial-gradient(
-    120.91% 118.4% at 50% 100%,
-    rgba(99, 102, 241, 0.1) 0%,
-    rgba(218, 70, 239, 0.05) 41.83%,
-    rgba(241, 244, 253, 0.07) 82.52%
-  );
-  
   max-height: 150vh;
 
   display: grid;
@@ -268,7 +276,7 @@ background: radial-gradient(
 
 
 .brands {
-  padding-inline: var(--padding-page);
+  margin-top: 5rem;
 
   .brand-box {
     flex: 1 1 0;
@@ -286,7 +294,7 @@ background: radial-gradient(
 
 .features {
   padding: var(--padding-page);
-  max-height: 150vh;
+  max-height: 100vh;
 }
 
 .feat-img {
@@ -298,6 +306,8 @@ background: radial-gradient(
 .feat-text {
   flex: 2;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto 1fr 1fr 1fr;
 }
 
 .functionality {
