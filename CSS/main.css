@@ -125,6 +125,12 @@
   display: none;
 }
 
+.icon-box {
+  background-color: rgba(99, 102, 241, 0.08);
+  border-radius: 0.5em;
+  padding: 1rem;
+}
+
 a {
   text-decoration: none;
 }
@@ -139,8 +145,47 @@ body {
   background-color: var(--background-white);
 }
 
+h1.display {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 130%;
+  color: var(--text-grey900);
+}
+
+h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 130%;
+  color: var(--text-grey900);
+}
+h3 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 130%;
+  color: var(--text-grey900);
+}
+h4 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  line-height: 140%;
+  color: var(--text-grey900);
+}
+h5 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: var(--line-height);
+  color: var(--text-grey900);
+}
+p {
+  line-height: var(--line-height);
+  color: var(--text-grey700);
+  margin: 0;
+}
+
 small {
   font-size: 1rem;
+  line-height: var(--line-height);
+  color: var(--text-grey600);
 }
 
 .full-width-hero-bg {
@@ -194,7 +239,6 @@ small {
 
 .nav {
   grid-area: nav;
-  padding-block: var(--padding-page);
   padding: 1.25rem 0;
 
   .navgroup-left {
@@ -216,9 +260,7 @@ small {
   }
 
   small {
-    font-size: 1rem;
     font-weight: 600;
-    line-height: var(--line-height);
     color: var(--text-grey700);
   }
 
@@ -235,18 +277,12 @@ small {
   margin-bottom: 3rem;
 
   h1.display {
-    font-size: 3.5rem;
-    font-weight: 800;
-    line-height: 130%;
-
     margin-top: 0;
     margin-bottom: 0;
   }
 
   p {
     font-size: 1.125rem;
-    line-height: var(--line-height);
-    color: var(--text-grey700);
 
     margin-top: 0;
     margin-bottom: 3rem;
@@ -260,8 +296,6 @@ small {
   }
 
   small {
-    font-size: 1rem;
-    line-height: var(--line-height);
     color: var(--text-grey700);
   }
 }
@@ -277,6 +311,7 @@ small {
 
 .brands {
   margin-top: 5rem;
+  height: fit-content;
 
   .brand-box {
     flex: 1 1 0;
@@ -293,8 +328,7 @@ small {
 }
 
 .features {
-  padding: var(--padding-page);
-  max-height: 100vh;
+  height: fit-content;
 }
 
 .feat-img {
@@ -305,9 +339,27 @@ small {
 }
 .feat-text {
   flex: 2;
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto 1fr 1fr 1fr;
+  gap: 2rem;
+}
+
+.feat-header {
+  grid-column: 1 / -1;
+
+  margin-bottom: 1rem;
+  text-align: start;
+  
+  h2 {
+    margin-top: 0;
+  text-align: start;
+}
+
+.feat {
+
+}
 }
 
 .functionality {
@@ -383,7 +435,6 @@ small {
 
 .footer {
   color: rgba(var(--text-grey600), 0.8);
-  line-height: var(--line-height);
   gap: 0.2rem;
 
   padding-top: 3rem;
