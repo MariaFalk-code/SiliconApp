@@ -42,10 +42,10 @@
             </div>
             <div class="flex-left gap-1-5">
               <button class="btn-market flex-center">
-                <img src="/resources/icons and logos/appstore-light.svg" width="97%" height="97%" alt="Appstore" />
+                <img src="/resources/icons and logos/appstore-light.svg" width="97%" alt="Appstore" />
               </button>
               <button class="btn-market flex-center">
-                <img src="/resources/icons and logos/googleplay-light.svg" width="97%" height="97%" alt="Googleplay" />
+                <img src="/resources/icons and logos/googleplay-light.svg" width="97%" alt="Googleplay" />
               </button>
             </div>
             <div class="discover gap-1">
@@ -143,26 +143,54 @@
           </div>
         </section>
 
-        <section class="functionality flex-column">
+        <section class="functionality">
           <div class="main-functions">
-            <!--visible on all units-->
             <h2>How Does It Work?</h2>
-            <img src="/resources/Pictures desktop/iPhone 12 Pro-work-bg.png" alt="Iphone 12 pro carousel background" />
-            <img
-              src="/resources/Pictures desktop/iPhone 12 Pro-work-left.png"
-              alt="Phone showing graphic over budget and spending" />
-            <img
-              src="/resources/Pictures desktop/Iphone 12 pro-work-middle.png"
-              alt="Phone showing paycard and transactions" />
-            <img
-              src="/resources/Pictures desktop/iPhone 12 Pro-work-right.png"
-              alt="Phone showing current balance and contacts" />
-            <h4>Latest transaction history</h4>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati accusantium beatae laudantium
-              exercitationem maxime ipsam dolor rerum magni, soluta architecto.
-            </p>
+            <!-- Carousel base code from Chat GPT 4o, modified to fit design and add captions-->
+            <div class="carousel-wrapper flex-center gap-2">
+              <button class="prev" onclick="prevSlide()">Prev</button>
+              <div class="carousel-container">
+                <img
+                  id="base-carousel"
+                  class="phone-img"
+                  src="/resources/Pictures desktop/iPhone base-carousel.png"
+                  alt="Phone Image" />
+                <div id="overlay-container">
+                  <img src="/resources/Pictures desktop/iPhone overlay-1.png" alt="Budget graph" class="overlay-img" />
+                  <img
+                    src="/resources/Pictures desktop/Iphone overlay-2.png"
+                    alt="Recent transactions"
+                    class="overlay-img shrink active" />
+                  <img src="/resources/Pictures desktop/iPhone overlay-3.png" alt="Transfer" class="overlay-img" />
+                </div>
+              </div>
+              <button class="next" onclick="nextSlide()">Next</button>
+            </div>
+            <div id="carousel-texts">
+              <div class="carousel-caption">
+                <h4>Latest transaction history</h4>
+                <p>
+                  Enim, et amet praesent pharetra. Mi non ante hendrerit amet sed. Arcu sociis tristique quisque hac in
+                  consectetur condimentum.
+                </p>
+              </div>
+              <div class="carousel-caption active">
+                <h4>Transfers to people from your contact list</h4>
+                <p>
+                  Proin volutpat mollis egestas. Nam luctus facilisis ultrices. Pellentesque volutpat ligula est. Mattis
+                  fermentum, at nec lacus.
+                </p>
+              </div>
+              <div class="carousel-caption">
+                <h4>Be in control of your budget</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo dignissimos ex placeat autem?
+                  Voluptatibus aut consequuntur laudantium enim.
+                </p>
+              </div>
+            </div>
           </div>
+
           <div class="more-functions">
             <!--visible on desktop only-->
             <h3>Make your money transfer simple and clear</h3>
@@ -185,6 +213,7 @@
             <button>Learn more <i class="fa-regular fa-arrow-right"></i></button>
           </div>
         </section>
+
         <section class="reviews">
           <!--Visible on desktop only-->
           <h2>Clients are Lovning Our App</h2>
@@ -284,5 +313,7 @@
         <small>Credit MadrasThemes</small>
       </footer>
     </div>
+
+    <script src="/Javascript/carousel.js"></script>
   </body>
 </html>

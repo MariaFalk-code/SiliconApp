@@ -16,7 +16,6 @@
   --grey800: #33354d;
   --grey900: #0b0f19;
 
-  
   /* Background colors*/
   --background-primary: #ffffff;
   --background-dark: #f7f8ff;
@@ -89,7 +88,7 @@
 }
 
 .btn-market {
-  background-color: var(--background-grey900);
+  background-color: var(--grey900);
 
   border: none;
   border-radius: 0.5em;
@@ -126,7 +125,6 @@
 .flex-column {
   display: flex;
   flex-direction: column;
-
 }
 
 /*Gap*/
@@ -198,7 +196,7 @@ h4 {
   color: var(--headline);
 
   margin-top: 0;
-  margin-bottom: .75em;
+  margin-bottom: 0.75em;
 }
 h5 {
   font-size: 1rem;
@@ -260,6 +258,7 @@ small {
 
 .hero {
   max-height: 150vh;
+  width: 100%;
 
   display: grid;
   grid-template-areas:
@@ -338,7 +337,6 @@ small {
   max-height: 105vh;
 }
 
-
 .brands {
   margin-top: 5rem;
   height: fit-content;
@@ -359,6 +357,7 @@ small {
 
 .features {
   height: fit-content;
+  width: 100%;
 }
 
 .feat-img {
@@ -382,20 +381,114 @@ small {
 
   margin-bottom: 2rem;
   text-align: start;
-  
+
   h2 {
     margin-top: 0;
-  text-align: start;
-}
+    text-align: start;
+  }
 }
 
-.functionality {
-  .main-functions {
-    background-color: var(--background-grey100);
+.main-functions {
+  background: var(--background-grey100);
+  width: 100%;
+  height: fit-content;
+  border-radius: .5em;
+  
+  
+  text-align: center;
+
+  h2 {
+    padding-top: 5rem;
+    padding-bottom: 1rem;
   }
-  .more-functions {
-    background-color: var(--background-white);
+  h4 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
   }
+  p {
+    font-size: 1rem;
+  }
+}
+
+/* Carousel base code from Chat GPT 4o, modified to fit design and add captions*/
+
+.carousel-container {
+  display: inline-block;
+  position: relative;
+}
+
+.phone-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+#overlay-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.overlay-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.overlay-img.shrink {
+  position: absolute;
+  top: 17px;
+  left: 17px;
+  width: 89.5%;
+  height: 89.5%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.overlay-img.active {
+  opacity: 1;
+}
+
+#carousel-texts {
+  position: relative;
+  display: inline-block;
+  padding: 6rem 25%;
+
+}
+
+.carousel-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.carousel-caption.active {
+  opacity: 1;
+}
+
+button.prev,
+button.next {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.more-functions {
+  background-color: var(--background-primary);
+  height: fit-content;
+  display: grid;
+  margin-top: 3rem;
 }
 
 .reviews {
@@ -408,6 +501,7 @@ small {
 
 .newsletter {
   background-color: var(--background-grey100);
+  border-radius: .5rem;
 
   .subscribe {
     display: flex;
