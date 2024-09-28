@@ -488,7 +488,61 @@ button.next {
   background-color: var(--background-primary);
   height: fit-content;
   display: grid;
+  grid-template-columns: 1fr 1fr;
+
+
   margin-top: 3rem;
+}
+
+.grid-tl {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.grid-tr {
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.grid-bl {
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.grid-br {
+  justify-content: center;
+  display: grid;
+  grid-template-areas:
+  "header header"
+  "icon-l icon-r"
+  "p-l p-r"
+  "learn-btn";
+}
+
+.grid-br.header {
+  grid-area: header;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.grid-br.icon-l {
+  grid-area: icon-l;
+}
+
+.grid-br.icon-r {
+  grid-area: icon-r;
+}
+
+.grid-br.p-l {
+  grid-area: p-l;
+}
+
+.grid-br.p-r {
+  grid-area: p-r;
+}
+
+.grid-br.learn-btn {
+  grid-area: learn-btn;
 }
 
 .reviews {
