@@ -644,8 +644,17 @@ small {
 }
 }
 
-.FAQ {
-  background-color: var(--background-white);
+.faq {
+  width: 100%;
+  height: fit-content; 
+
+}
+.faq-info {
+  
+}
+
+.faq-acc {
+  
 }
 
 .newsletter {
