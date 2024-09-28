@@ -54,7 +54,7 @@
 .btn-s {
   background-color: var(--color-brand);
   color: var(--text-white);
-  font-size: 0.9rem;
+  font-size: .9rem;
   font-weight: 600;
   line-height: 1.125rem;
 
@@ -63,6 +63,24 @@
 
   display: inline-block;
   padding: 0.6rem 1.25rem;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-m {
+  background-color: var(--color-brand);
+  color: var(--text-white);
+  font-size: .9rem;
+  font-weight: 600;
+  line-height: var(--line-height);
+
+  border: none;
+  border-radius: 0.375em;
+
+  display: inline-block;
+  padding: 0.6825rem 1.75rem;
   text-align: center;
   vertical-align: middle;
   text-decoration: none;
@@ -170,7 +188,7 @@ body {
   background-color: var(--background-primary);
 }
 
-h1.display {
+.display {
   font-size: 3.5rem;
   font-weight: 800;
   line-height: 130%;
@@ -305,7 +323,7 @@ small {
   margin-top: 9rem;
   margin-bottom: 3rem;
 
-  h1.display {
+  .display {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -486,6 +504,7 @@ button.next {
 
 .more-functions {
   background-color: var(--background-primary);
+  max-width: 100%;
   height: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -495,9 +514,27 @@ button.next {
 }
 
 .grid-tl {
-  justify-content: center;
   align-items: flex-start;
-}
+
+  h3 {
+    margin-top: 0;
+  }
+
+  }
+
+  .grid-tl > ul {
+    list-style-type: none;
+    padding-inline-start: 0;
+  }
+
+  li {
+    margin-bottom: 1rem;
+  }
+
+  .li-icon{
+    margin-right: 1rem;
+    color: var(--color-brand);
+  }
 
 .grid-tr {
   justify-content: center;
@@ -510,39 +547,41 @@ button.next {
 }
 
 .grid-br {
-  justify-content: center;
   display: grid;
+  height: fit-content;
+  grid-template-columns: 1fr 1fr;
   grid-template-areas:
   "header header"
   "icon-l icon-r"
   "p-l p-r"
-  "learn-btn";
+  "learn-btn none";
 }
 
-.grid-br.header {
+.grid-br > .header {
   grid-area: header;
   margin-top: 0;
-  margin-bottom: 0;
 }
 
-.grid-br.icon-l {
+.grid-br > .icon-l {
   grid-area: icon-l;
 }
 
-.grid-br.icon-r {
+.grid-br > .icon-r {
   grid-area: icon-r;
 }
 
-.grid-br.p-l {
+.grid-br > .p-l {
   grid-area: p-l;
 }
 
-.grid-br.p-r {
+.grid-br > .p-r {
   grid-area: p-r;
 }
 
-.grid-br.learn-btn {
+.grid-br > .learn-btn {
   grid-area: learn-btn;
+  margin-top: 1.5rem;
+  margin-right: auto;
 }
 
 .reviews {
