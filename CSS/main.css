@@ -5,6 +5,7 @@
   /*Colors*/
   --color-brand: #6366f1;
   --white: #ffffff;
+  --system-success: #22c55e;
 
   --grey100: #f3f6ff;
   --grey200: #eff2fc;
@@ -54,7 +55,7 @@
 .btn-s {
   background-color: var(--color-brand);
   color: var(--text-white);
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: 1.125rem;
 
@@ -72,7 +73,7 @@
 .btn-m {
   background-color: var(--color-brand);
   color: var(--text-white);
-  font-size: .9rem;
+  font-size: 0.9rem;
   font-weight: 600;
   line-height: var(--line-height);
 
@@ -113,6 +114,18 @@
   height: 3.25rem;
   width: 11.25rem;
   padding: 0.5rem 1rem;
+}
+
+.btn-frameless {
+  background-color: transparent;
+
+  border: none;
+  padding: 1rem 0;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: var(--line-height);
 }
 
 /*Flexbox*/
@@ -177,8 +190,8 @@
   background-color: var(--color-brand);
   color: var(--text-white);
   font-size: 1.2rem;
-  border-radius: .375em;
-  padding: .75rem;
+  border-radius: 0.375em;
+  padding: 0.75rem;
 }
 
 a {
@@ -194,6 +207,7 @@ body {
   font-weight: 400;
   text-wrap: balance;
   background-color: var(--background-primary);
+  color: var(--text-grey700);
 }
 
 .display {
@@ -232,12 +246,11 @@ h5 {
 }
 p {
   line-height: var(--line-height);
-  color: var(--text-grey700);
   margin: 0;
 }
 
 small {
-  font-size: .9rem;
+  font-size: 0.9rem;
   line-height: var(--line-height);
   color: var(--text-grey600);
 }
@@ -316,7 +329,6 @@ small {
 
   small {
     font-weight: 600;
-    color: var(--text-grey700);
   }
 
   .slider {
@@ -348,10 +360,6 @@ small {
     justify-content: flex-start;
 
     margin-top: auto;
-  }
-
-  small {
-    color: var(--text-grey700);
   }
 }
 
@@ -418,9 +426,8 @@ small {
   background: var(--background-grey100);
   width: 100%;
   height: fit-content;
-  border-radius: .5em;
-  
-  
+  border-radius: 0.5em;
+
   text-align: center;
 
   h2 {
@@ -485,7 +492,6 @@ small {
   position: relative;
   display: inline-block;
   padding: 6rem 25%;
-
 }
 
 .carousel-caption {
@@ -518,7 +524,6 @@ button.next {
   display: grid;
   grid-template-columns: 1fr 1fr;
 
-
   margin-top: 3rem;
 }
 
@@ -528,22 +533,21 @@ button.next {
   h3 {
     margin-top: 0;
   }
+}
 
-  }
+.grid-tl > ul {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
 
-  .grid-tl > ul {
-    list-style-type: none;
-    padding-inline-start: 0;
-  }
+li {
+  margin-bottom: 1rem;
+}
 
-  li {
-    margin-bottom: 1rem;
-  }
-
-  .li-icon{
-    margin-right: 1rem;
-    color: var(--color-brand);
-  }
+.li-icon {
+  margin-right: 1rem;
+  color: var(--color-brand);
+}
 
 .grid-tr {
   justify-content: center;
@@ -560,10 +564,10 @@ button.next {
   height: fit-content;
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
-  "header header"
-  "icon-l icon-r"
-  "p-l p-r"
-  "learn-btn none";
+    "header header"
+    "icon-l icon-r"
+    "p-l p-r"
+    "learn-btn none";
 }
 
 .grid-br > .header {
@@ -597,7 +601,7 @@ button.next {
   background-color: var(--background-grey100);
   width: 100%;
   height: fit-content;
-  border-radius: .5em;
+  border-radius: 0.5em;
 
   padding-block: 6rem;
   padding-left: 1rem;
@@ -630,7 +634,7 @@ button.next {
   img {
     grid-row: -1 / 1;
   }
-  
+
   cite {
     font-size: 1rem;
     font-style: normal;
@@ -639,9 +643,9 @@ button.next {
     color: var(--text-grey900);
   }
 
-small {
-  color: rgba(var(--text-grey600), 0.9);
-}
+  small {
+    color: rgba(var(--text-grey600), 0.9);
+  }
 }
 
 .faq {
@@ -649,30 +653,61 @@ small {
   height: fit-content;
   display: grid;
   grid-template-columns: 1fr auto;
-  
-
 }
 .faq-info {
   width: 100%;
   margin-right: 8rem;
-  
+
   h2 {
     white-space: nowrap;
-}
+  }
+
+  p {
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-box {
+    padding: 1.5rem;
+    border: 1px solid var(--border-grey300);
+    border-radius: 0.5rem;
+    align-items: flex-start;
+  }
+
+  img {
+    height: 2em;
+    width: 2em;
+  }
+
+  .btn-call {
+    color: var(--color-brand);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+
+  .btn-text {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--system-success);
+  }
+
+  em {
+    font-size: .875rem;
+    font-style: normal;
+    line-height: var(--line-height);
+  }
 }
 
 .faq-acc {
-  
 }
 
 .question {
   justify-content: space-between;
-  }
-
+}
 
 .newsletter {
   background-color: var(--background-grey100);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
 
   .subscribe {
     display: flex;
