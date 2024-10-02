@@ -1,4 +1,4 @@
-// Script copied from ChatGPT 4o, modified to add captions.
+// Script rendered by ChatGPT 4o, modified to add captions.
 let currentSlide = 0;
 const overlays = document.querySelectorAll('.overlay-img');
 const captions = document.querySelectorAll('.carousel-caption');
