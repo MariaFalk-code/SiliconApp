@@ -1,6 +1,6 @@
-//Script rendered by ChatGPT 4o.
+//Script rendered by ChatGPT 4o, slightly modifed to fit project.
 
-document.querySelectorAll('.question').forEach(button => {
+document.querySelectorAll('.question, .faq-chevron').forEach(button => {
   button.addEventListener('click', () => {
       const content = button.nextElementSibling;
 

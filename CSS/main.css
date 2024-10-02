@@ -726,8 +726,18 @@ li {
     margin: 0;
   }
 
-  .btn {
+  .faq-chevron {
     background-color: var(--grey100);
+    transition: var(--transition);
+  }
+
+  .faq-chevron.active {
+    background-color: var(--color-brand);
+    color: var(--text-white);
+}
+
+  .faq-chevron.active .fa-regular {
+    transform: rotate(180deg);
   }
 }
 
