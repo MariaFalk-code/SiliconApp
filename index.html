@@ -23,11 +23,11 @@
             <div class="navgroup-right flex-center gap-2">
               <div class="flex-center">
                 <small>Dark Mode</small>
-                <button class="slider">SLIDER</button>
+                <button class="btn slider">SLIDER</button>
               </div>
-              <button class="btn-s"><i class="fa-light fa-user"></i> &nbsp; Sign in / up</button>
+              <a href="#"><button class="btn btn-s"><i class="fa-light fa-user"></i> &nbsp; Sign in / up</button></a>
             </div>
-            <button class="hidden-desktop">
+            <button class="hidden-desktop btn">
               <i class="fa-regular fa-bars" title="meny"></i>
             </button>
           </nav>
@@ -41,15 +41,19 @@
               </p>
             </div>
             <div class="flex-left gap-1-5">
-              <button class="btn-market flex-center">
-                <img src="/resources/icons and logos/appstore-light.svg" width="97%" alt="Appstore" />
-              </button>
-              <button class="btn-market flex-center">
-                <img src="/resources/icons and logos/googleplay-light.svg" width="97%" alt="Googleplay" />
-              </button>
+              <a href="#">
+                <button class="btn btn-market flex-center">
+                  <img src="/resources/icons and logos/appstore-light.svg" width="97%" alt="Appstore" />
+                </button>
+              </a>
+              <a href="#">
+                <button class="btn btn-market flex-center">
+                  <img src="/resources/icons and logos/googleplay-light.svg" width="97%" alt="Googleplay" />
+                </button>
+              </a>
             </div>
-            <div class="discover gap-1">
-              <button><i class="fa-regular fa-chevron-down"></i></button>
+            <div class="discover flex-left gap-1">
+              <a href="#features"><button class="btn btn-chevron"><i class="fa-regular fa-chevron-down"></i></button></a>
               <small>Discover more</small>
             </div>
           </div>
@@ -150,7 +154,7 @@
             <h2>How Does It Work?</h2>
             <!-- Carousel base code from Chat GPT 4o, modified to fit design and add captions-->
             <div class="carousel-wrapper flex-center gap-2">
-              <button class="prev" onclick="prevSlide()">Prev</button>
+              <button class="prev btn btn-chevron" onclick="prevSlide()"><i class="fa-regular fa-chevron-left"></i></button>
               <div class="carousel-container">
                 <img
                   id="base-carousel"
@@ -166,7 +170,7 @@
                   <img src="/resources/Pictures desktop/iPhone overlay-3.png" alt="Transfer" class="overlay-img" />
                 </div>
               </div>
-              <button class="next" onclick="nextSlide()">Next</button>
+              <button class="next btn btn-chevron" onclick="nextSlide()"><i class="fa-regular fa-chevron-right"></i></button>
             </div>
             <div id="carousel-texts">
               <div class="carousel-caption">
@@ -203,7 +207,7 @@
                 <li><span class="li-icon"><i class="fa-regular fa-circle-check"></i></span>No monthly cash commission</li>
                 <li><span class="li-icon"><i class="fa-regular fa-circle-check"></i></span>Manage payments and transactions online</li>
               </ul>
-              <button class="btn-m">Learn more &nbsp;&nbsp;<i class="fa-regular fa-arrow-right"></i></button>
+              <button class="btn btn-m">Learn more &nbsp;&nbsp;<i class="fa-regular fa-arrow-right"></i></button>
             </div>
             <div class="grid-tr flex-column">
               <img
@@ -217,7 +221,7 @@
               <p class="p-l">Manage your payments online. Mollis congue egestas egestas fermentum fames.</p>
               <img class="icon-r icon-box" src="/resources/icons and logos/wallet-regular.svg" alt="wallet icon" />
               <p class="p-r" >A elementur and imperdiet enim, pretium etiam facilisi aenean quam mauris.</p>
-              <button class="btn-m learn-btn" >Learn more &nbsp;&nbsp;<i class="fa-regular fa-arrow-right"></i></button>
+              <button class="btn btn-m learn-btn" >Learn more &nbsp;&nbsp;<i class="fa-regular fa-arrow-right"></i></button>
             </div>
           </div>
         </section>
@@ -259,14 +263,14 @@
             <p>Still have unanswered questions and need to get in touch?</p>
             <div class="flex-left gap-1-5">
               <div class="contact-box flex-column gap-1">
-                <img src="/resources/icons and logos/phone.svg" alt="phone icon" />
+                <a href="#"><img src="/resources/icons and logos/phone.svg" alt="phone icon" /></a>
                 <em>Still have questions?</em>
-                <button class="btn-frameless btn-call">Contact us &nbsp; <i class="fa-regular fa-arrow-right"></i></button>
+                <a href="#"><button class="btn btn-frameless btn-call">Contact us &nbsp; <i class="fa-regular fa-arrow-right"></i></button></a>
               </div>
               <div class="contact-box flex-column gap-1">
-                <img src="/resources/icons and logos/textmsg.svg" alt="textbubble icon" />
+                <a href="#"><img src="/resources/icons and logos/textmsg.svg" alt="textbubble icon" /></a>
                 <em>Don't like phone calls?</em>
-                <button class="btn-frameless btn-text">Contact us &nbsp; <i class="fa-regular fa-arrow-right"></i></button>
+                <a href="#"><button class="btn btn-frameless btn-text">Contact us &nbsp; <i class="fa-regular fa-arrow-right"></i></button></a>
               </div>
             </div>
           </div>
@@ -275,7 +279,7 @@
           <div class="faq-acc flex-column">
           <div class="question flex-left">
             <h5>Is any of my personal information stored in the App?</h5>
-            <button><i class="fa-regular fa-chevron-down"></i></button>
+            <button class="btn btn-chevron"><i class="fa-regular fa-chevron-down"></i></button>
           </div>
           <p>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis quo fuga accusantium et ipsum beatae esse
@@ -285,7 +289,7 @@
           </p>
           <div class="question flex-left">
             <h5>What formats can I download my transaction history in?</h5>
-            <button><i class="fa-regular fa-chevron-down"></i></button>
+            <button class="btn btn-chevron"><i class="fa-regular fa-chevron-down"></i></button>
           </div>
           <p>
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nostrum aut assumenda ipsam maiores minus
@@ -295,7 +299,7 @@
           </p>
           <div class="question flex-left">
             <h5>Can I schedule future transfers?</h5>
-            <button><i class="fa-regular fa-chevron-down"></i></button>
+            <button class="btn btn-chevron"><i class="fa-regular fa-chevron-down"></i></button>
           </div>
           <p>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim deserunt, tempora nisi expedita reprehenderit
@@ -305,7 +309,7 @@
           </p>
           <div class="question flex-left">
             <h5>When can I use Banking App services?</h5>
-            <button><i class="fa-regular fa-chevron-down"></i></button>
+            <button class="btn btn-chevron"><i class="fa-regular fa-chevron-down"></i></button>
           </div>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia facilis consequatur nobis nulla eligendi!
@@ -315,7 +319,7 @@
           </p>
           <div class="question flex-left">
             <h5>Can I create my own password that is easy for me to remember?</h5>
-            <button><i class="fa-regular fa-chevron-down"></i></button>
+            <button class="btn btn-chevron"><i class="fa-regular fa-chevron-down"></i></button>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat ratione fuga, praesentium illum quisquam
@@ -325,7 +329,7 @@
           </p>
           <div class="question flex-left">
             <h5>What happens if I forget or lose my password?</h5>
-            <button><i class="fa-regular fa-chevron-down"></i></button>
+            <button class="btn btn-chevron"><i class="fa-regular fa-chevron-down"></i></button>
           </div>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta vero aperiam mollitia, ullam rem facere
@@ -344,7 +348,7 @@
           <div class="email-form">
             <i class="fa-thin fa-envelope icon"></i>
             <input class="form-input" type="email" placeholder="Your Email" />
-            <button class="btn-l sub">Subscribe</button>
+            <a href="#"><button class="btn btn-l sub">Subscribe</button></a>
           </div>
         </section>
       </main>

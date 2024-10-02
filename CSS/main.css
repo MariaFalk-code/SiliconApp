@@ -52,6 +52,17 @@
 /*Utility Classes*/
 
 /*Buttons*/
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  white-space: nowrap;
+  border: none;
+  cursor: pointer;
+
+}
 .btn-s {
   background-color: var(--color-brand);
   color: var(--text-white);
@@ -59,15 +70,8 @@
   font-weight: 600;
   line-height: 1.125rem;
 
-  border: none;
   border-radius: 0.25em;
-
-  display: inline-block;
   padding: 0.6rem 1.25rem;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
 .btn-m {
@@ -77,15 +81,8 @@
   font-weight: 600;
   line-height: var(--line-height);
 
-  border: none;
   border-radius: 0.375em;
-
-  display: inline-block;
   padding: 0.6825rem 1.75rem;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
 .btn-l {
@@ -95,36 +92,36 @@
   font-weight: 600;
   line-height: var(--line-height);
 
-  border: none;
   border-radius: 0.5em;
-
-  display: inline-block;
   padding: 0.8125rem 2rem;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  white-space: nowrap;
 }
 
 .btn-market {
   background-color: var(--grey900);
 
-  border: none;
   border-radius: 0.5em;
   height: 3.25rem;
   width: 11.25rem;
   padding: 0.5rem 1rem;
 }
 
+.btn-chevron {
+  background-color: var(--background-primary);
+  color: var(--grey800);
+
+  border-radius: 50%;
+  font-size: .9rem;
+ padding: .625rem;
+
+  box-shadow: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+}
+
 .btn-frameless {
   background-color: transparent;
+  font-size: 0.875rem;
+  font-weight: 600;
 
-  border: none;
   padding: 1rem 0;
-  text-align: center;
-  vertical-align: middle;
-  text-decoration: none;
-  white-space: nowrap;
   line-height: var(--line-height);
 }
 
@@ -196,6 +193,7 @@
 
 a {
   text-decoration: none;
+  cursor: pointer;
 }
 
 /*End of utility classes*/
@@ -355,7 +353,6 @@ small {
   }
 
   .discover {
-    display: flex;
     justify-content: flex-start;
 
     margin-top: auto;
@@ -365,8 +362,7 @@ small {
 .hero-pics {
   grid-area: hero-pics;
   position: relative;
-  overflow-y: hidden;
-  overflow-x: visible;
+  overflow: hidden;
 
   max-height: 105vh;
 }
@@ -435,7 +431,6 @@ small {
   text-align: start;
 
   h2 {
-    margin-top: 0;
     text-align: start;
   }
 }
@@ -528,10 +523,8 @@ small {
 
 button.prev,
 button.next {
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-  padding: 10px;
+  padding: .625rem .875rem;
+  margin-top: 15rem;
 }
 
 .more-functions {
@@ -567,7 +560,7 @@ li {
   color: var(--color-brand);
 }
 
-.grid-tr {
+.grid-tr{
   justify-content: center;
   align-items: flex-end;
 }
@@ -699,13 +692,9 @@ li {
 
   .btn-call {
     color: var(--color-brand);
-    font-size: 0.875rem;
-    font-weight: 600;
   }
 
   .btn-text {
-    font-size: 0.875rem;
-    font-weight: 600;
     color: var(--system-success);
   }
 
