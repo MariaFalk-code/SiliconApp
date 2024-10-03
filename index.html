@@ -23,7 +23,10 @@
             <div class="navgroup-right flex-center gap-2">
               <div class="flex-center">
                 <small>Dark Mode</small>
-                <button class="btn slider">SLIDER</button>
+                <label for="darkmode-switch" class="toggle" >
+                  <input type="checkbox" id="darkmode-switch">
+                  <span class="slider"></span>
+                </label>
               </div>
               <a href="#"
                 ><button class="btn btn-s"><i class="fa-light fa-user"></i> &nbsp; Sign in / up</button></a
@@ -403,11 +406,11 @@
             <img class="notification" src="resources/icons and logos/notification.png" alt="notification icon" />
             <h3 class="text-sub">Subscribe to our newsletter <span>to stay informed about latest updates</span></h3>
           </div>
-          <div class="email-form">
+          <form class="email-form" autocomplete="on">
             <i class="fa-thin fa-envelope icon"></i>
-            <input class="form-input" type="email" placeholder="Your Email" />
+            <input class="form-input" type="email" id="email" placeholder="Your Email" autocomplete="email"/>
             <a href="#"><button class="btn btn-l sub">Subscribe</button></a>
-          </div>
+          </form>
         </section>
       </main>
       <footer class="footer flex-center">
