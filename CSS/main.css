@@ -42,6 +42,7 @@
   --transition: 0.2s ease-in-out;
   --line-height: 160%;
   --shadow-s: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
+  --shadow-brand: 0px 8px 18px -8px rgba(99, 102, 241, 0.90);
 }
 
 *,
@@ -190,6 +191,8 @@
   font-size: 1.2rem;
   border-radius: 0.375em;
   padding: 0.75rem;
+
+  box-shadow: var(--shadow-brand);
 }
 
 a {
@@ -371,18 +374,18 @@ small {
 .front-img {
   position: relative;
   margin-top: 5rem;
-  margin-left: auto;
-  height: 20%;
-  aspect-ratio: 1/1;
+  margin-left: 25rem;
+  margin-right: 0;
+  
   z-index: 10;
 }
 
 .back-img {
   position: absolute;
   bottom: 0;
-  left: 0;
-  height: 70%;
-  aspect-ratio: 1/1;
+  left: 5rem;
+  max-height: 70%;
+  max-width: 70%;
   z-index: 1;
 }
 
@@ -631,7 +634,16 @@ li {
     padding: 3rem 1.5rem 1.5rem 1.5rem;
 
     box-shadow: var(--shadow-s);
+
+    position: relative;
   }
+
+  i {
+    position: absolute;
+    top: 0;
+    transform: translateY(-50%);
+  }
+
   p {
     font-size: 1.125rem;
     margin-bottom: 1rem;
