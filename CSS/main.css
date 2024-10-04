@@ -19,7 +19,7 @@
 
   /* Background colors*/
   --background-primary: #ffffff;
-  --background-dark: #f7f8ff;
+  --background-dark: #0b0f19;
   --background-grey100: #f3f6ff;
 
   /* Text colors */
@@ -30,7 +30,8 @@
   --text-grey700: #565973; /* Body textcolor Light theme */
   --text-grey600: 147, 151, 174; /*for adding opacity*/
   --text-grey500: #b4b7c9;
-  --text-white: #ffffff; /* textcolor Dark theme */
+  --text-white: #ffffff;
+  --text-body-white: rgb(255, 255, 255, 0,7); /* textcolor body fark theme */
 
   /* Additional colors */
   --border-grey300: #e2e5f1;
@@ -45,6 +46,15 @@
   --shadow-brand: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
 }
 
+.dark {
+  color-scheme: dark;
+  --background-primary: var(--background-dark);
+  --headline: var(--headline-dark);
+  --text-grey700: var(--text-body-white);
+  --text-grey800: rgba var(--text-white, 0.85);
+  --text-grey900: var(--text-white);
+ 
+}
 *,
 *::before,
 *::after {
@@ -290,6 +300,11 @@ a {
 }
 
 /*End of utility classes*/
+
+html {
+  color-scheme: light;
+}
+
 
 body {
   font-family: "Manrope", sans-serif;
