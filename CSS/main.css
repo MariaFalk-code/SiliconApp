@@ -18,28 +18,40 @@
   --grey900: #0b0f19;
 
   /* Background colors*/
-  --background-primary: #ffffff;
-  --background-dark: #0b0f19;
-  --background-grey100: #f3f6ff;
+  --background-primary: var(--white);
+  --background-dark: var(--grey900);
+  --background-hero: radial-gradient(
+    120.91% 118.4% at 50% 100%,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(218, 70, 239, 0.05) 41.83%,
+    rgba(241, 244, 253, 0.07) 82.52%
+  );
+  --background-secondary: var(--grey100);
+  --background-secondary-dark: rgba(255, 255, 255, 0.04);
+  --background-white: var(--white);
+
+  --mrkt-bg-grey100: var(--grey100);
+  --mrkt-bg-dark: var(--grey900);
+  --btn-white: var(--white);
+  --btn-dark: var(--grey800);
 
   /* Text colors */
-  --headline: #0b0f19; /* Light theme */
-  --headline-dark: #ffffff; /* Dark theme */
-  --text-grey900: #0b0f19;
-  --text-grey800: #33354d;
-  --text-grey700: #565973; /* Body textcolor Light theme */
+  --headline: var(--grey900); /* Light theme */
+  --headline-dark: var(--white); /* Dark theme */
+  --text-grey900: var(--grey900);
+  --text-grey800: var(--grey800);
+  --text-grey700: var(--grey700); /* Body textcolor Light theme */
   --text-grey600: 147, 151, 174; /*for adding opacity*/
-  --text-grey500: #b4b7c9;
-  --text-white: #ffffff;
-  --text-body-white: rgb(255, 255, 255, 0,7); /* textcolor body fark theme */
+  --text-grey500: var(--grey500);
+  --text-white: var(--white);
+  --text-body-white: rgba(255, 255, 255, 0.7); /* textcolor body fark theme */
 
   /* Additional colors */
-  --border-grey300: #e2e5f1;
-  --border-forms-grey400: #d4d7e5;
-  --border-secondary-grey200: #eff2fc;
+  --border-grey300: var(--grey300);
+  --border-forms-grey400: var(--grey400);
+  --border-secondary-grey200: var(--grey200);
 
   /*Misc*/
-  --padding-page: 16.25%;
   --transition: 0.2s ease-in-out;
   --line-height: 160%;
   --shadow-s: 0px 4.4px 12px -1px rgba(19, 16, 34, 0.06), 0px 2px 6.4px -1px rgba(19, 16, 34, 0.03);
@@ -49,11 +61,16 @@
 .dark {
   color-scheme: dark;
   --background-primary: var(--background-dark);
+  --background-secondary: var(--background-secondary-dark);
+  --background-white: var(--background-secondary-dark);
+
   --headline: var(--headline-dark);
   --text-grey700: var(--text-body-white);
   --text-grey800: rgba var(--text-white, 0.85);
   --text-grey900: var(--text-white);
- 
+
+  --mrkt-bg-dark: var(--mrkt-bg-grey100);
+  --btn-white: var(--btn-dark);
 }
 *,
 *::before,
@@ -96,9 +113,9 @@
   }
 
   &:focus-visible {
-      filter: brightness(1.1);
-      box-shadow: 0px 0px 8px 4px rgba(99, 102, 241, 0.8);
-    }
+    filter: brightness(1.1);
+    box-shadow: 0px 0px 8px 4px rgba(99, 102, 241, 0.8);
+  }
 }
 
 .btn-m {
@@ -121,9 +138,9 @@
   }
 
   &:focus-visible {
-      filter: brightness(1.1);
-      box-shadow: 0px 0px 8px 4px rgba(99, 102, 241, 0.8);
-    }
+    filter: brightness(1.1);
+    box-shadow: 0px 0px 8px 4px rgba(99, 102, 241, 0.8);
+  }
 }
 
 .btn-l {
@@ -146,13 +163,13 @@
   }
 
   &:focus-visible {
-      filter: brightness(1.1);
-      box-shadow: 0px 0px 8px 4px rgba(99, 102, 241, 0.8);
-    }
+    filter: brightness(1.1);
+    box-shadow: 0px 0px 8px 4px rgba(99, 102, 241, 0.8);
+  }
 }
 
 .btn-market {
-  background-color: var(--grey900);
+  background-color: var(--mrkt-bg-dark);
 
   border-radius: 0.5em;
   height: 3.25rem;
@@ -173,8 +190,8 @@
 }
 
 .btn-chevron {
-  background-color: var(--background-primary);
-  color: var(--grey800);
+  background-color: var(--btn-white);
+  color: var(--text-grey800);
 
   border-radius: 50%;
   font-size: 0.9rem;
@@ -182,7 +199,7 @@
 
   box-shadow: var(--shadow-s);
 
-  &:hover{
+  &:hover {
     filter: brightness(1.2);
     box-shadow: var(--shadow-brand);
     i {
@@ -190,7 +207,7 @@
     }
   }
 
-  &:focus-visible { 
+  &:focus-visible {
     box-shadow: 0px 0px 8px 4px rgba(99, 102, 241, 0.8);
     i {
       transform: scale(1.2);
@@ -208,11 +225,11 @@
   font-size: 0.875rem;
   font-weight: 600;
 
-  padding: .5rem;
+  padding: 0.5rem;
   border-radius: 2rem;
   line-height: var(--line-height);
 
-  &:hover{
+  &:hover {
     filter: brightness(1.3);
   }
 
@@ -305,7 +322,6 @@ html {
   color-scheme: light;
 }
 
-
 body {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;
@@ -368,13 +384,7 @@ small {
   width: 100%;
   height: fit-content;
 
-  /*Hero background*/
-  background: radial-gradient(
-    120.91% 118.4% at 50% 100%,
-    rgba(99, 102, 241, 0.1) 0%,
-    rgba(218, 70, 239, 0.05) 41.83%,
-    rgba(241, 244, 253, 0.07) 82.52%
-  );
+  background: var(--background-hero);
 
   background-size: cover;
   background-position: center;
@@ -433,15 +443,14 @@ small {
     font-weight: 600;
     line-height: var(--line-height);
     color: var(--text-grey800);
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 2rem;
 
-
-    &:hover{
+    &:hover {
       filter: brightness(1.3);
       opacity: 0.9;
     }
-    
+
     &:focus-visible {
       outline: none;
       filter: brightness(1.3);
@@ -493,7 +502,7 @@ small {
     border: 2px solid var(--grey600);
     border-radius: 1rem;
   }
-  
+
   .slider::before {
     content: "";
     position: absolute;
@@ -618,7 +627,7 @@ small {
 }
 
 .main-functions {
-  background: var(--background-grey100);
+  background: var(--background-secondary);
   width: 100%;
   height: fit-content;
   border-radius: 0.5em;
@@ -791,7 +800,7 @@ li {
 }
 
 .reviews {
-  background-color: var(--background-grey100);
+  background-color: var(--background-secondary);
   width: 100%;
   height: fit-content;
   border-radius: 0.5em;
@@ -879,22 +888,21 @@ li {
   img {
     height: 3rem;
     width: 3rem;
-    padding: .5rem;
+    padding: 0.5rem;
 
     &:hover {
-    filter: brightness(1.1);
-  }
+      filter: brightness(1.1);
+    }
 
-  &:active {
-    filter: brightness(1.1);
-    opacity: 0.9;
-  }
+    &:active {
+      filter: brightness(1.1);
+      opacity: 0.9;
+    }
   }
 
   a:focus-visible {
     border-radius: 2rem;
     box-shadow: 0px 0px 8px 4px rgba(99, 102, 241, 0.8);
-
   }
 
   .btn-call {
@@ -909,9 +917,9 @@ li {
     font-size: 0.875rem;
     font-style: normal;
     line-height: var(--line-height);
-    margin-top: .5rem;
-    margin-bottom: .5rem;
-    margin-left: .5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
   }
 }
 
@@ -922,6 +930,7 @@ li {
 }
 
 .acc-item {
+  background: var(--background-white);
   margin-bottom: 1rem;
   padding: 1rem 1.5rem;
   border: none;
@@ -933,10 +942,6 @@ li {
   justify-content: space-between;
   h5 {
     margin: 0;
-  }
-
-  .faq-chevron {
-    background-color: var(--grey100);
   }
 
   .faq-chevron.active {
@@ -960,7 +965,7 @@ li {
 }
 
 .newsletter {
-  background-color: var(--background-grey100);
+  background-color: var(--background-secondary);
   border-radius: 0.5rem;
 
   .subscribe {
