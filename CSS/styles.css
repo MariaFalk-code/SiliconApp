@@ -357,6 +357,8 @@ body {
   font-weight: 800;
   line-height: 130%;
   color: var(--headline);
+
+  margin-bottom: 1.5rem;
 }
 
 h2 {
@@ -553,14 +555,9 @@ small {
 
 .hero-text {
   grid-area: hero-text;
-  max-height: 105vh;
 
   margin-top: 9rem;
   margin-bottom: 3rem;
-
-  .display {
-    margin: 0;
-  }
 
   p {
     font-size: 1.125rem;
@@ -572,35 +569,37 @@ small {
   .discover {
     justify-content: flex-start;
 
-    margin-top: auto;
+    margin-top: 5rem;
   }
 }
 
 .hero-pics {
+  position: relative;
   grid-area: hero-pics;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
   overflow: hidden;
-
-  max-height: 105vh;
+  object-fit: contain;
+  max-width: 100%;
 }
 
 .front-img {
-  position: relative;
-  max-height: 85%;
+  position: absolute;
+  right: 0;
+  bottom: -6rem;
+  max-width: 100%;
   aspect-ratio: 1/1;
   z-index: 10;
 }
 
 .back-img {
   position: absolute;
-  bottom: 3rem;
-  right: 95%;
-  max-height: 70%;
-  max-width: 70%;
-  z-index: -5;
+  bottom: -5rem;
+  left: 0;
+  max-width: 100%;
+  aspect-ratio: 1/1;
+  z-index: 1;
 }
+
+/* End of hero section */
 
 .brands {
   margin-top: 5rem;
@@ -1061,7 +1060,7 @@ li {
 /* NOTE TO TEACHER: I've only just started working on the section below. I worked towards the
 goals for "G" in this course but have added some more features like darkmode for my own 
 learning in the time I had left. In my next project I will use SCSS from the beginning,
-it seems handy and will make the responsive design way less messy.*/
+it seems handy and will make building the responsive design way less messy.*/
 
 /* Non-wrapper-related Media queries */
 /* XSMALL ('mobile')*/
@@ -1083,53 +1082,11 @@ it seems handy and will make the responsive design way less messy.*/
   .hidden-S {
     display: none;
   }
-
-  .hero {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-areas:
-      "nav nav"
-      "headline headline"
-      "hero-text hero-pics";
-
-    h1.hidden-desktop {
-      grid-area: headline;
-      font-size: 2.7rem;
-      margin-inline: auto;
-      margin-bottom: 0;
-    }
-
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
-      margin-top: 6rem;
-    }
-
-    .flex-tablet {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 3rem;
-    }
-
-    .hero-pics {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
-      margin-left: 3rem;
-
-      img {
-        width: 100%;
-        object-fit: contain;
-      }
-    }
   }
 
   .feat-header {
     h2 {
+      font-size: 2.5rem;
       display: block;
       text-align: center;
       margin-top: 0;
@@ -1139,7 +1096,6 @@ it seems handy and will make the responsive design way less messy.*/
       display: block;
       text-align: center;
     }
-  }
 
   .main-functions {
     h2 {
@@ -1153,7 +1109,7 @@ it seems handy and will make the responsive design way less messy.*/
 
   .faq {
     grid-template-columns: 1fr;
-}
+  }
 }
 
 /*MEDIUM AND UP ('desktop')*/
