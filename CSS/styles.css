@@ -4,18 +4,18 @@
 :root {
   /*Colors*/
   --color-brand: rgb(99, 102, 241);
-  --white: #ffffff;
-  --system-success: #22c55e;
+  --white: rgb(255, 255, 255);
+  --system-success: rgb(34, 197, 94);
 
-  --grey100: #f3f6ff;
-  --grey200: #eff2fc;
-  --grey300: #e2e5f1;
-  --grey400: #d4d7e5;
-  --grey500: #b4b7c9;
-  --grey600: #9397ad;
-  --grey700: #565973;
-  --grey800: #33354d;
-  --grey900: #0b0f19;
+  --grey100: rgb(243, 246, 255);
+  --grey200: rgb(239, 242, 252);
+  --grey300: rgb(226, 229, 241);
+  --grey400: rgb(212, 215, 229);
+  --grey500: rgb(180, 183, 201);
+  --grey600: rgb(147, 151, 173);
+  --grey700: rgb(86, 89, 115);
+  --grey800: rgb(51, 53, 77);
+  --grey900: rgb(11, 15, 25);
 
   /* Background colors*/
   --background-primary: var(--white);
@@ -41,10 +41,10 @@
   --text-grey900: var(--grey900);
   --text-grey800: var(--grey800);
   --text-grey700: var(--grey700); /* Body textcolor Light theme */
-  --text-grey600: 147, 151, 174; /*for adding opacity*/
+  --text-grey600: 147, 151, 173; /*for adding opacity*/
   --text-grey500: var(--grey500);
   --text-white: var(--white);
-  --text-body-white: rgba(255, 255, 255, 0.7); /* textcolor body fark theme */
+  --text-body-white: rgba(255, 255, 255, 0.7); /* textcolor body dark theme */
 
   /* Additional colors */
   --border-grey300: var(--grey300);
@@ -1082,20 +1082,20 @@ it seems handy and will make building the responsive design way less messy.*/
   .hidden-S {
     display: none;
   }
+}
+
+.feat-header {
+  h2 {
+    font-size: 2.5rem;
+    display: block;
+    text-align: center;
+    margin-top: 0;
   }
 
-  .feat-header {
-    h2 {
-      font-size: 2.5rem;
-      display: block;
-      text-align: center;
-      margin-top: 0;
-    }
-
-    p {
-      display: block;
-      text-align: center;
-    }
+  p {
+    display: block;
+    text-align: center;
+  }
 
   .main-functions {
     h2 {
