@@ -72,7 +72,7 @@
 
   --mrkt-bg-dark: var(--mrkt-bg-grey100);
   --btn-white: var(--btn-dark);
-  --border-grey300:rgba(255, 255, 255, 0.15);
+  --border-grey300: rgba(255, 255, 255, 0.15);
   --border-forms-grey400: rgba(255, 255, 255, 0.18);
 }
 *,
@@ -223,6 +223,28 @@
   }
 }
 
+.btn-meny {
+  background-color: transparent;
+  color: var(--text-grey800);
+
+  font-size: 1.5rem;
+
+  border-radius: 0.5em;
+  padding: 0.5rem;
+
+  &:hover {
+    filter: brightness(1.3);
+  }
+
+  &:focus-visible {
+    box-shadow: var(--shadow-tab);
+  }
+
+  &:active {
+    opacity: 0.7;
+  }
+}
+
 .btn-frameless {
   background-color: transparent;
   font-size: 0.875rem;
@@ -293,10 +315,6 @@
 }
 
 /*Misc*/
-.hidden-desktop {
-  display: none;
-}
-
 .icon-box {
   background-color: rgba(99, 102, 241, 0.08);
   border-radius: 0.5em;
@@ -397,23 +415,31 @@ small {
   width: 100%;
   margin: auto;
 
-  /* MOBILE*/
-  @media (min-width: 576px) {
+  /* Wrapper media queries */
+
+  /* XSMALL ('mobile')*/
+  @media (width < 576px) {
+    padding-inline: 1rem;
+  }
+  /*SMALL ('tablet')*/
+  @media (576px < width < 768px) {
     max-width: 540px;
   }
-  /*TABLET*/
-  @media (min-width: 768px) {
+  /*MEDIUM ('desktop')*/
+  @media (768px < width < 992px) {
     max-width: 720px;
   }
-
-  @media (min-width: 992px) {
+  /*LARGE ('large desktop')*/
+  @media (992px < width < 1200px) {
     max-width: 960px;
   }
-  @media (min-width: 1200px) {
+  /*XLARGE ('extra large desktop')*/
+  @media (1200px < width < 1400px) {
     max-width: 1140px;
   }
-  @media (min-width: 1400px) {
-    max-width: 1320px;
+  /*XXLARGE ('extra large desktop')*/
+  @media (width > 1400px) {
+    max-width: 1140px;
   }
 }
 
@@ -521,6 +547,10 @@ small {
   }
 }
 
+.btn-meny {
+  margin-left: auto;
+}
+
 .hero-text {
   grid-area: hero-text;
   max-height: 105vh;
@@ -615,17 +645,11 @@ small {
   grid-column: 1 / -1;
 
   margin-bottom: 2rem;
-  text-align: start;
-
-  h2 {
-    text-align: start;
-  }
+  justify-content: flex-start;
 
   p {
     font-size: 1.125rem;
     color: var(--text-grey600);
-
-    text-align: start;
   }
 }
 
@@ -1032,4 +1056,109 @@ li {
 
   padding-top: 3rem;
   padding-bottom: 3rem;
+}
+
+/* NOTE TO TEACHER: I've only just started working on the section below. I worked towards the
+goals for "G" in this course but have added some more features like darkmode for my own 
+learning in the time I had left. In my next project I will use SCSS from the beginning,
+it seems handy and will make the responsive design way less messy.*/
+
+/* Non-wrapper-related Media queries */
+/* XSMALL ('mobile')*/
+@media (width < 576px) {
+  .hidden-XS {
+    display: none;
+  }
+  .hidden-XS-S {
+    display: none;
+  }
+}
+
+/*SMALL ('tablet')*/
+@media (576px < width < 768px) {
+  .hidden-XS-S {
+    display: none;
+  }
+
+  .hidden-S {
+    display: none;
+  }
+
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas:
+      "nav nav"
+      "headline headline"
+      "hero-text hero-pics";
+
+    h1.hidden-desktop {
+      grid-area: headline;
+      font-size: 2.7rem;
+      margin-inline: auto;
+      margin-bottom: 0;
+    }
+
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      margin-top: 6rem;
+    }
+
+    .flex-tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 3rem;
+    }
+
+    .hero-pics {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-left: 3rem;
+
+      img {
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+
+  .feat-header {
+    h2 {
+      display: block;
+      text-align: center;
+      margin-top: 0;
+    }
+
+    p {
+      display: block;
+      text-align: center;
+    }
+  }
+
+  .main-functions {
+    h2 {
+      font-size: 2rem;
+    }
+
+    #carousel-texts {
+      padding: 6rem 45%;
+    }
+  }
+
+  .faq {
+    grid-template-columns: 1fr;
+}
+}
+
+/*MEDIUM AND UP ('desktop')*/
+@media (768px < width) {
+  .hidden-desktop {
+    display: none;
+  }
 }

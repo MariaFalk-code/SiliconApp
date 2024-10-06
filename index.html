@@ -7,8 +7,8 @@
     <meta
       name="description"
       content="Overview of the Silicon banking app, enabling easy payments and money transfers all in your phone" />
+       <!-- Normalize resets necessary styling elements-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
-    <!-- Resets necessary styling elements-->
     <link rel="stylesheet" href="https://kit.fontawesome.com/a576612222.css" crossorigin="anonymous" />
     <link rel="stylesheet" href="CSS/styles.css" />
   </head>
@@ -24,34 +24,36 @@
                 data-light="resources/icons and logos/silicon-light.png"
                 data-dark="resources/icons and logos/silicon-dark.png"
                 alt="Silicon Logo" />
-              <a class="nav-feat" href="#features">Features</a>
+              <a class="nav-feat hidden-XS-S" href="#features">Features</a>
             </div>
             <div class="navgroup-right flex-center gap-2">
               <div class="flex-center">
-                <small>Dark Mode</small>
+                <small class="hidden-XS">Dark Mode</small>
                 <label for="darkModeSwitch" class="toggle">
                   <input type="checkbox" id="darkModeSwitch" />
                   <span class="slider"></span>
                 </label>
               </div>
-              <a href="#" tabindex="-1"
+              <a href="#" tabindex="-1" class="hidden-XS-S"
                 ><button class="btn btn-s"><i class="fa-light fa-user"></i> &nbsp; Sign in / up</button></a
               >
             </div>
-            <button class="hidden-desktop btn">
+            <button class="btn btn-meny hidden-desktop">
               <i class="fa-regular fa-bars" title="meny"></i>
             </button>
           </nav>
 
+          <!-- Double H1 here as a hack to easily fix the display for tablet -->
+          <h1 class="display hidden-desktop hidden-XS">Manage All Your<br />Money in One App</h1>
           <div class="hero-text flex-column">
             <div class="flex-column gap-1-5">
-              <h1 class="display">Manage All Your<br />Money in One App</h1>
+              <h1 class="display hidden-S">Manage All Your<br />Money in One App</h1>
               <p>
                 We offer you a new generation of the mobile banking.<br />
                 Save, spend & manage money in your pocket.
               </p>
             </div>
-            <div class="flex-left gap-1-5">
+            <div class="flex-left gap-1-5 flex-tablet">
               <a href="#" tabindex="-1">
                 <button class="btn btn-market flex-center">
                   <img
@@ -83,12 +85,12 @@
             </div>
           </div>
 
-          <div class="hero-pics">
+          <div class="hero-pics hidden-XS">
             <div class="front-img">
               <img
                 src="resources/Pictures desktop/iPhone 12 Pro front-header.png"
                 alt="Iphone showing transactions in the Silicon money transfer banking app" />
-              <div class="back-img">
+              <div class="back-img hidden-S">
                 <img src="resources/Pictures desktop/Group 4.png" alt="Iphone showing budget" class="shadow" />
               </div>
             </div>
@@ -98,7 +100,7 @@
     </div>
     <div class="wrapper">
       <main class="main flex-column gap-5">
-        <aside class="brands flex-center gap-1">
+        <aside class="brands flex-center gap-1 hidden-XS">
           <div class="brand-box flex-center">
             <img src="resources/icons and logos/logo1.svg" alt="Brandlogo 1" />
           </div>
@@ -111,16 +113,16 @@
           <div class="brand-box flex-center">
             <img src="resources/icons and logos/logo4.svg" alt="Brandlogo 4" />
           </div>
-          <div class="brand-box flex-center">
+          <div class="brand-box flex-center hidden-XS-S">
             <img src="resources/icons and logos/logo5.svg" alt="Brandlogo 5" />
           </div>
-          <div class="brand-box flex-center">
+          <div class="brand-box flex-center hidden-XS-S">
             <img src="resources/icons and logos/logo6.svg" alt="Brandlogo 6" />
           </div>
         </aside>
 
         <section class="features flex-ct" id="features">
-          <div class="feat-img flex-center">
+          <div class="feat-img flex-center hidden-XS-S">
             <img src="resources/Pictures desktop/iphone 12 Pro-features.png" alt="Iphone and creditcard" />
           </div>
           <div class="feat-text flex-center">
@@ -229,8 +231,8 @@
             </div>
           </div>
 
-          <div class="more-functions flex-left">
-            <!--visible on desktop only-->
+          <!--visible on desktop only-->
+          <div class="more-functions flex-left hidden-XS-S">
             <div class="grid-tl flex-column">
               <h3>Make your money transfer simple and clear</h3>
 
@@ -277,8 +279,8 @@
           </div>
         </section>
 
-        <section class="reviews flex-ct gap-1">
-          <!--Visible on desktop only-->
+        <!--Visible on desktop only-->
+        <section class="reviews flex-ct gap-1 hidden-XS-S">
           <h2>
             Clients are <br />
             Lovning Our App
@@ -426,8 +428,8 @@
         </section>
         <section class="newsletter flex-center">
           <div class="subscribe gap-2">
-            <img class="notification" src="resources/icons and logos/notification.png" alt="notification icon" />
-            <h3 class="text-sub">Subscribe to our newsletter <span>to stay informed about latest updates</span></h3>
+            <img class="notification hidden-XS-S" src="resources/icons and logos/notification.png" alt="notification icon" />
+            <h3 class="text-sub">Subscribe to our newsletter <span class="hidden-XS-S">to stay informed about latest updates</span></h3>
           </div>
           <form class="email-form" autocomplete="on">
             <i class="fa-thin fa-envelope icon"></i>
